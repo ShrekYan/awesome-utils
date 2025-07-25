@@ -1,10 +1,10 @@
 {
-  "name": "awesome-utils",
+  "name": "awesome-utils-owner",
   "version": "1.0.0",
   "description": "",
   "exports": {
     "./http": {
-      "import": "./dist/http.js",
+      "import": "./dist/http.mjs",
       "types": "./dist/types/http/index.d.ts"
     }
   },
@@ -26,7 +26,6 @@
   "dependencies": {
     "axios": "^1.11.0",
     "es-toolkit": "^1.39.7",
-    "react-awesome-all-component": "^0.0.10",
     "uuid": "^11.1.0"
   }
 }

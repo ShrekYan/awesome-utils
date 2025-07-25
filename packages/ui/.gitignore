@@ -1,0 +1,7 @@
+/node_modules/
+*.iml
+.idea/*
+.idea/workspace.xml
+.DS_Store
+*.log
+

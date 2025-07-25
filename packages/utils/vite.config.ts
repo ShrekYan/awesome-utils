@@ -22,16 +22,14 @@ export default defineConfig({
                 http:"./src/http/index.ts"
             },
             name:"awesome-utils",
-            formats:["es"],
-            // 设置输出文件名格式 (默认: [name].js)
-            fileName: (format, entryName) => `${entryName}.js`
+            formats:["es"]
         },
         rollupOptions:{
             external:[],
             output:{
                 preserveModules:false,
                 compact:false, //取消压缩格式
-                entryFileNames:`[name].js`,
+
             }
         },
         emptyOutDir:true
