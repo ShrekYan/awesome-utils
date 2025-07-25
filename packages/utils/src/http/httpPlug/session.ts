@@ -1,11 +1,12 @@
 import { RESPONSE_CODE } from "./constant";
 import type { HttpPluginOptions } from "../http";
-// import { createBrowserHistory } from "history";
+import type {CallbackFunction} from "../types"
 
-export default ({ options, resp }: HttpPluginOptions) => {
-    //const history = createBrowserHistory();
-    //session过期处理
-    if (resp.data.code === RESPONSE_CODE.SESSION_TIMEOUT && options.openExpire) {
-        // console.log(history.push);
-    }
-};
+export default (callback:CallbackFunction)=>{
+    return ({ options, resp }: HttpPluginOptions) => {
+        //session过期处理
+        if (resp.data.code === RESPONSE_CODE.SESSION_TIMEOUT && options.openExpire) {
+            callback();
+        }
+    };
+}

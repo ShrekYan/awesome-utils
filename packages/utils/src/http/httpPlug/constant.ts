@@ -1,7 +1,3 @@
-export const PARAMS_CONFIG = {
-    SOURCE: "H",
-    VERSION: "5.0.0"
-};
 /**
  * 网络错误
  * @type {{errorMsg: string}}

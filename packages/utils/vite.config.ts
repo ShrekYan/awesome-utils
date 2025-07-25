@@ -19,7 +19,7 @@ export default defineConfig({
         minify:false, //取消压缩效果
         lib:{
             entry:{
-                http:"./src/http/http.ts"
+                http:"./src/http/index.ts"
             },
             name:"awesome-utils",
             formats:["es"],

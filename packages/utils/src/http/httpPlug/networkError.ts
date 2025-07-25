@@ -1,12 +1,10 @@
-//import showErrorToastFn from "./showErrorToast";
-import type { HttpPluginOptions } from "../http.ts";
-import { NETWORK } from "./constant";
-import showErrorToastFn from "./showErrorToast";
+import type {HttpPluginOptions} from "../http.ts";
+import type {CallbackFunction} from "../types"
 
-const showErrorToast = showErrorToastFn();
-
-export default ({ options }: HttpPluginOptions) => {
-    if (!options.backupMockData) {
-        showErrorToast(NETWORK.ERROR_MSG);
-    }
-};
+export default (callback?: CallbackFunction) => {
+    return ({options}: HttpPluginOptions) => {
+        if (!options.backupMockData && options.autoInteract) {
+            callback?.();
+        }
+    };
+}

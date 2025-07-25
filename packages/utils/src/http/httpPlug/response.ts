@@ -1,6 +1,5 @@
 import type { HttpPluginOptions } from "../http.ts";
 import { RESPONSE_CODE } from "./constant";
-// import { Toast } from "antd-mobile";
 
 export default ({ url, options, resp }: HttpPluginOptions) => {
     //默认开启返回原始数据
@@ -16,11 +15,10 @@ export default ({ url, options, resp }: HttpPluginOptions) => {
         }
         return resData;
     } else {
-        //接口发生错误自动关闭loading
-        if (options.errorExitAndCloseLoading) {
-            // Toast.clear();
-        }
-
+        // //接口发生错误自动关闭loading
+        // if (options.errorExitAndCloseLoading) {
+        //     Toast.clear();
+        // }
         console.log(
             `%c接口出现异常:\ncode=${resp.data.code};\nurl=${url};\ndata=${JSON.stringify(resp.data)};`,
             "color:red;font-size:12px"
