@@ -8,7 +8,10 @@
     "build": "lerna run build",
     "lerna-init": "lerna init",
     "bootstrap": "pnpm install",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "utils-build": "lerna run build --scope=awesome-utils-owner",
+    "ui-build": "lerna run build --scope=awesome-component-owner",
+    "build-link": "lerna run build && lerna link"
   },
   "files": [
     "dist"
