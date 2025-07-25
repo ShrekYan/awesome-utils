@@ -1,6 +1,6 @@
 {
   "name": "awesome-component-owner",
-  "version": "1.0.1",
+  "version": "0.0.2",
   "description": "",
   "types": "./dist/types/index.d.ts",
   "typings": "./dist/types/index.d.ts",
