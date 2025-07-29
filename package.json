@@ -11,7 +11,8 @@
     "publish": "lerna publish",
     "utils-build": "lerna run build --scope=awesome-utils-owner",
     "ui-build": "lerna run build --scope=awesome-component-owner",
-    "build-link": "lerna run build && lerna link"
+    "build-link": "lerna run build && lerna link",
+    "clear": "lerna clean -y && rm -rf node_modules"
   },
   "files": [
     "dist"
