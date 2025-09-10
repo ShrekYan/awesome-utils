@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.common-loading .loading-container {
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: translateZ(1px);
+}
+.common-loading .loading-container .mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1005;
+}
+.common-loading .loading-container .content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  color: #fff;
+  z-index: 1006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 内容的容器 */
+}
+.common-loading .loading-container .content .container {
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  background: #fff;
+  /* loading效果 */
+}
+.common-loading .loading-container .content .container .desc {
+  padding-top: 10px;
+  font-size: 24px;
+}
+.common-loading .loading-container .content .container .loader {
+  position: relative;
+  margin: 0 auto;
+  width: 60px;
+}
+.common-loading .loading-container .content .container .loader::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.common-loading .loading-container .content .container .loader .circular1, .common-loading .loading-container .content .container .loader .circular2 {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+.common-loading .loading-container .content .container .loader .circular1 .path, .common-loading .loading-container .content .container .loader .circular2 .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke: #FC6047;
+  animation: dash 2s ease-in-out infinite;
+  stroke-linecap: round;
+}
+.common-loading .loading-container .content .container .loader .circular2 {
+  animation: rotate 1s linear infinite;
+  width: 70%;
+}
+.common-loading .loading-container .content .container .loader .circular2 .path {
+  animation: dash1 1s ease infinite;
+  stroke-linecap: round;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes dash1 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes color {
+  100%, 0% {
+    stroke: #d62d20;
+  }
+}
+.common-loading .loading-container .content .container .loader-text {
+  padding-top: 10px;
+  font-size: 20px;
+  color: #666;
+}

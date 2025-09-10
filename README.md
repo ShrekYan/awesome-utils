@@ -3,3 +3,9 @@
 
 
 ### 待办事项
+* Awesome-utils
+ * 1.eslint、style lint
+ * 2.husky
+ * 3.peritte
+ * 4.lerna（useNx:true） + pnpm
+ * https://yuanbao.tencent.com/chat/naQivTmsDa/cb9e7a6d-a395-4cd2-9eda-be85e4568bfd
